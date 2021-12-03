@@ -243,13 +243,11 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="dropdown-header">Main</li>
-<li>
-  <a href="index.html"></a>
+        <li>
+  <a href="index.html">Main</a>
 </li>
-<li class="dropdown-header">Employee Attrition Project</li>
 <li>
-  <a href="Employee-Attrition-EDA.html"></a>
+  <a href="Employee-Attrition-EDA.html">Employee Attrition Project</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -856,18 +854,8 @@ graph_roledata %&gt;%
 data2 = data2[,1:31]
 
 
-data2_not = select(data,!is.numeric)</code></pre>
-<pre><code>## Warning: Predicate functions must be wrapped in `where()`.
-## 
-##   # Bad
-##   data %&gt;% select(is.numeric)
-## 
-##   # Good
-##   data %&gt;% select(where(is.numeric))
-## 
-## ℹ Please update your code.
-## This message is displayed once per session.</code></pre>
-<pre class="r"><code>data2_not = data2_not[,2:9]
+data2_not = select(data,!is.numeric)
+data2_not = data2_not[,2:9]
 
 data2_not = data2_not %&gt;% 
   mutate(BusinessTravelRank = case_when(
@@ -955,13 +943,13 @@ output = model_info %&gt;%
   arrange(-Specificity)
 
 head(output)</code></pre>
-<pre><code>##                                                                Model Sensitivity Specificity
-## 1 Model for  EmployeeCount  and  StockOptionLevel  and  OvertimeRank   0.9016393   0.3428571
-## 2  Model for  StockOptionLevel  and  OvertimeRank  and  OvertimeRank   0.9016393   0.3428571
-## 3         Model for  EmployeeCount  and  JobLevel  and  OvertimeRank   0.9344262   0.3142857
-## 4              Model for  JobLevel  and  JobLevel  and  OvertimeRank   0.9344262   0.3142857
-## 5     Model for  JobLevel  and  PerformanceRating  and  OvertimeRank   0.9344262   0.3142857
-## 6         Model for  JobLevel  and  StandardHours  and  OvertimeRank   0.9344262   0.3142857</code></pre>
+<pre><code>##                                                                          Model Sensitivity Specificity
+## 1     Model for  StockOptionLevel  and  OverallSatisfaction  and  OvertimeRank   0.9513514   0.3939394
+## 2                   Model for  EmployeeCount  and  JobLevel  and  OvertimeRank   0.9243243   0.3636364
+## 3 Model for  EnvironmentSatisfaction  and  StockOptionLevel  and  OvertimeRank   0.9567568   0.3636364
+## 4                        Model for  JobLevel  and  JobLevel  and  OvertimeRank   0.9243243   0.3636364
+## 5               Model for  JobLevel  and  PerformanceRating  and  OvertimeRank   0.9243243   0.3636364
+## 6                   Model for  JobLevel  and  StandardHours  and  OvertimeRank   0.9243243   0.3636364</code></pre>
 <p><br></p>
 </div>
 <div id="classification-naive-bayes" class="section level1">
