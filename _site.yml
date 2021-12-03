@@ -1,0 +1,10 @@
+name: "Elyjiah-Potter-Portfolio"
+navbar:
+  title: "Elyjiah Potter Portfolio"
+  left:
+    - text: "Main"
+    - href: index.html
+    - text: "Employee Attrition Project"
+    - href: Employee-Attrition-EDA.html
+    
+    
